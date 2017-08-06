@@ -20,7 +20,6 @@ namespace Softleister\Linksplitter;
  */
 class ModuleLinkSplitter extends \Module
 {
-
     /**
      * Template
      * @var string

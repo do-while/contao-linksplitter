@@ -30,8 +30,7 @@ class Plugin implements BundlePluginInterface
     {
         return [
             BundleConfig::create( 'Softleister\LinksplitterBundle\SoftleisterLinksplitterBundle' )
-                ->setLoadAfter( ['Contao\CoreBundle\ContaoCoreBundle'] )
-                ->setLoadAfter( ['MenAtWork\MultiColumnWizard'] )
+                ->setLoadAfter( ['Contao\CoreBundle\ContaoCoreBundle', 'MenAtWork\MultiColumnWizard'] )
                 ->setReplace( ['linksplitter'] ),
         ];
     }

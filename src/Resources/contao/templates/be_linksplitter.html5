@@ -12,9 +12,9 @@
     <?php endif; ?>
   </div>
   <div style="margin-top:6px;">
-  <ul>
+  <ul style="margin-bottom:16px">
   <?php foreach( $this->ziele as $ziel ): ?>
-  <li><span style="display:inline-block;min-width:80px;"><?= $this->var ?>=<?= $ziel['vari'] ?></span>=&gt; <a href="<?= $ziel['dest'] ?>"><?= $ziel['dest'] ?></a></li>
+  <li><span style="display:inline-block;min-width:80px;"><?= $this->var ?>=<?= $ziel['vari'] ?></span>=&gt; <a href="<?= $ziel['dest'] ?>" target="_blank"><?= ($ziel['dest'] != '' ? $ziel['dest'] : 'index' . $GLOBALS['TL_CONFIG']['urlSuffix']) ?></a></li>
   <?php endforeach; ?>
   </ul>
   </div>
