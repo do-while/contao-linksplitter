@@ -26,6 +26,7 @@ Application examples:
 * Evaluation of URL parameters and dependent redirects
 
 
+___
 **Problem melden | Report Problem:**<br>
 https://github.com/do-while/contao-linksplitter/issues
 
