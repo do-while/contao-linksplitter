@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @copyright  Softleister 2013-2017
+ * @copyright  Softleister 2013-2020
  * @author     Softleister <info@softleister.de>
  * @package    contao-linksplitter
  * @license    LGPL
@@ -9,7 +9,7 @@
  *
  */
 
-define('LINKSPLITTER_VERSION', '1.0');
+define('LINKSPLITTER_VERSION', '1.1');
 define('LINKSPLITTER_BUILD'  , '0');
 
 /*

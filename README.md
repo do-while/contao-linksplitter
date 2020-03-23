@@ -10,8 +10,8 @@ Anwendungsbeispiele sind:
 
 
 **Version:**<br>
-* 1.0.0 stable - 2017-08-06<br>
-Version für Contao ab Version 4.4 LTS
+* 1.1.0 stable - 2020-03-23<br>Version für Contao ab Version 4.6<br>veränderter Wizardaufruf, multicolumnwizard-bundle
+* 1.0.0 stable - 2017-08-06<br>Version für Contao ab Version 4.4 LTS
 
 
 ___
@@ -33,4 +33,4 @@ https://github.com/do-while/contao-linksplitter/issues
 
 
 ___
-Softleister - 2017-08-06
+Softleister - 2020-08-23

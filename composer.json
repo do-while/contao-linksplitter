@@ -16,8 +16,8 @@
         "source": "https://github.com/do-while/contao-linksplitter"
     },
     "require": {
-        "php": ">=5.6.0",
-        "contao/core-bundle": "~4.4",
+        "php": "^7.1",
+        "contao/core-bundle": "~4.6",
         "menatwork/contao-multicolumnwizard-bundle": "~3.4"
     },
     "autoload": {
@@ -36,9 +36,6 @@
         ]
     },
     "extra": {
-        "branch-alias": {
-            "dev-develop": "1.1.x-dev"
-        },
 		"contao-manager-plugin": "Softleister\\LinksplitterBundle\\ContaoManager\\Plugin"
     }
 }
