@@ -24,7 +24,7 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['linksplit_method'] = array
     'default'                 => 'GET',
     'exclude'                 => true,
     'inputType'               => 'select',
-    'options'                 => array('POST', 'GET', 'InsertTag'),
+    'options'                 => array('POST', 'GET', 'InsertTag', 'COOKIE', 'REQUEST'),
     'eval'                    => array('tl_class'=>'w50'),
     'sql'                     => "varchar(12) NOT NULL default ''"
 );
