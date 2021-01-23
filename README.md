@@ -1,8 +1,8 @@
 # contao-linksplitter
-**Weiterleitungen abhängig von Post-/Get-Variablen oder InsertTags.**
+**Weiterleitungen abhängig von Post- oder Get-Variablen, InsertTags, Request (Get und Post) oder Cookie.**
 
 
-Modul zur Auswertung einer Post- oder Get-Variablen oder eines InsertTags. Konfigurierbare Weiterleitungen für bestimmte Variablenwerte.
+Modul zur Auswertung einer Post- oder Get-Variablen, eines InsertTags, des Requests (Get und Post) oder eines Cookies. Konfigurierbare Weiterleitungen für bestimmte Variablenwerte.
 
 Anwendungsbeispiele sind:
 * Formularweiterleitungen abhängig von einem Select-Feld
@@ -10,6 +10,7 @@ Anwendungsbeispiele sind:
 
 
 **Version:**<br>
+* 1.2.0 stable - 2021-01-23<br>Variable für Abhängigkeit erweitert: REQUEST (GET und POST) und COOKIE<br>Danke an wuapaadev
 * 1.1.0 stable - 2020-03-23<br>Version für Contao ab Version 4.6<br>veränderter Wizardaufruf, multicolumnwizard-bundle
 * 1.0.0 stable - 2017-08-06<br>Version für Contao ab Version 4.4 LTS
 
@@ -33,4 +34,4 @@ https://github.com/do-while/contao-linksplitter/issues
 
 
 ___
-Softleister - 2020-08-23
+Softleister - 2021-01-23
