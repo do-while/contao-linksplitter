@@ -68,6 +68,12 @@ class ModuleLinkSplitter extends \Module
                                 break;
             case 'InsertTag':   $value = $this->replaceInsertTags( $this->linksplit_var, false );
                                 break;
+            case 'COOKIE':      $value = \Input::cookie( $this->linksplit_var );
+                                break;
+            case 'REQUEST':     $value = \Input::post( $this->linksplit_var );
+                                if( $value =='' )
+                                    $value = \Input::get( $this->linksplit_var );
+                                break;
             default:            $value = '';
         }
         if( $value != '' ) {
