@@ -1,15 +1,22 @@
 <?php
 
 /**
- * @copyright  Softleister 2013-2017
+ * @copyright  Softleister 2013-2022
  * @author     Softleister <info@softleister.de>
- * @package    contao-linksplitter            äöü
+ * @package    contao-linksplitter
  * @license    LGPL
  * @see        https://github.com/do-while/contao-linksplitter
  *
  */
 
 namespace Softleister\Linksplitter;
+
+use Contao\Module;
+use Contao\BackendTemplate;
+use Contao\StringUtil;
+use Contao\Input;
+use Contao\Environment;
+use Contao\Controller;
 
 /**
  * Class ModuleLinkSplitter
@@ -18,7 +25,7 @@ namespace Softleister\Linksplitter;
  * @author    Softleister
  * @copyright Softleister  2013-2017
  */
-class ModuleLinkSplitter extends \Module
+class ModuleLinkSplitter extends Module
 {
     /**
      * Template
@@ -35,18 +42,18 @@ class ModuleLinkSplitter extends \Module
     {
         if (TL_MODE == 'BE')
         {
-            $objTemplate = new \BackendTemplate('be_linksplitter');
+            $objTemplate = new BackendTemplate('be_linksplitter');
 
-            $objTemplate->wildcard = '### ' . utf8_strtoupper($GLOBALS['TL_LANG']['FMD']['linksplitter'][0]) . ' ###';
+            $objTemplate->wildcard = '### ' . mb_strtoupper($GLOBALS['TL_LANG']['FMD']['linksplitter'][0]) . ' ###';
             $objTemplate->title = $this->headline;
             $objTemplate->id = $this->id;
             $objTemplate->link = $this->name;
             $objTemplate->href = 'contao/main.php?do=themes&amp;table=tl_module&amp;act=edit&amp;id=' . $this->id;
             $objTemplate->var   = $this->linksplit_var;
 
-            $ziele = deserialize($this->linksplit_destinations);
+            $ziele = StringUtil::deserialize($this->linksplit_destinations);
             for( $i = 0; $i < count($ziele); $i++ ) {
-                $ziele[$i]['dest'] = $this->replaceInsertTags($ziele[$i]['dest'], false);
+                $ziele[$i]['dest'] = Controller::replaceInsertTags($ziele[$i]['dest'], false);
             }
             $objTemplate->ziele = $ziele;
 
@@ -62,34 +69,34 @@ class ModuleLinkSplitter extends \Module
     protected function compile()
     {
         switch( $this->linksplit_method ) {
-            case 'POST':        $value = \Input::post( $this->linksplit_var );
+            case 'POST':        $value = Input::post( $this->linksplit_var );
                                 break;
-            case 'GET':         $value = \Input::get( $this->linksplit_var );
+            case 'GET':         $value = Input::get( $this->linksplit_var );
                                 break;
-            case 'InsertTag':   $value = $this->replaceInsertTags( $this->linksplit_var, false );
+            case 'InsertTag':   $value = Controller::replaceInsertTags( $this->linksplit_var, false );
                                 break;
-            case 'COOKIE':      $value = \Input::cookie( $this->linksplit_var );
+            case 'COOKIE':      $value = Input::cookie( $this->linksplit_var );
                                 break;
-            case 'REQUEST':     $value = \Input::post( $this->linksplit_var );
+            case 'REQUEST':     $value = Input::post( $this->linksplit_var );
                                 if( $value =='' )
-                                    $value = \Input::get( $this->linksplit_var );
+                                    $value = Input::get( $this->linksplit_var );
                                 break;
             default:            $value = '';
         }
         if( $value != '' ) {
             // Get-Parameter übertragen
-            $url = \Environment::get('indexFreeRequest');
+            $url = Environment::get('indexFreeRequest');
             if( strpos( $url, '?' ) !== False ) {
                 $param = preg_replace( '/^.+\?/', '?', $url );
             }
             else $param = '';
 
-            $ziele = deserialize($this->linksplit_destinations);
+            $ziele = StringUtil::deserialize($this->linksplit_destinations);
             for( $i = 0; $i < count($ziele); $i++ ) {
-                $ziel = $this->replaceInsertTags($ziele[$i]['vari'], false);
+                $ziel = Controller::replaceInsertTags($ziele[$i]['vari'], false);
 
                 if( ($ziel === $value) || ($ziel === '*') ) {
-                    $this->redirect( $this->replaceInsertTags($ziele[$i]['dest'], false) . $param );
+                    $this->redirect( Controller::replaceInsertTags($ziele[$i]['dest'], false) . $param );
                 }
             }
         }

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @copyright  Softleister 2013-2017
+ * @copyright  Softleister 2013-2022
  * @author     Softleister <info@softleister.de>
  * @package    contao-linksplitter
  * @license    LGPL
@@ -25,4 +25,3 @@ $GLOBALS['TL_LANG']['tl_module']['linksplit_dest']         = 'Ziel-URL';
  */
 $GLOBALS['TL_LANG']['tl_module']['split_legend']        = 'Splittersteuerung';
 $GLOBALS['TL_LANG']['tl_module']['destination_legend']  = 'Umleitungsziele';
-

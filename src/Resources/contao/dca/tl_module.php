@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @copyright  Softleister 2013-2020
+ * @copyright  Softleister 2013-2022
  * @author     Softleister <info@softleister.de>
  * @package    contao-linksplitter
  * @license    LGPL
@@ -59,4 +59,3 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['linksplit_destinations'] = array
                                  ),
     'sql'                     => "blob NULL"
 );
-

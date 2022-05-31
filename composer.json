@@ -16,9 +16,9 @@
         "source": "https://github.com/do-while/contao-linksplitter"
     },
     "require": {
-        "php": "^7.1",
-        "contao/core-bundle": "~4.4",
-        "menatwork/contao-multicolumnwizard-bundle": "~3.4"
+        "php": "^7.4 || ^8.0",
+        "contao/core-bundle": "~4.4,<5.0",
+        "menatwork/contao-multicolumnwizard-bundle": "^3.5"
     },
     "autoload": {
         "psr-4": {
