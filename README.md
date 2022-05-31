@@ -33,6 +33,5 @@ ___
 https://github.com/do-while/contao-linksplitter/issues
 
 
-
 ___
 Softleister - 2022-05-31
