@@ -16,26 +16,25 @@
         "source": "https://github.com/do-while/contao-linksplitter"
     },
     "require": {
-        "php": "^7.4 || ^8.0",
-        "contao/core-bundle": "~4.4,<5.0",
-        "menatwork/contao-multicolumnwizard-bundle": "^3.5"
+        "php": "^8.2",
+        "contao/core-bundle": "^5.3",
+        "menatwork/contao-multicolumnwizard-bundle": "^3.6"
     },
     "autoload": {
         "psr-4": {
             "Softleister\\LinksplitterBundle\\": "src/"
         },
         "classmap": [
-            "src/Resources/contao/"
+            "contao/"
         ],
         "exclude-from-classmap": [
-            "src/Resources/contao/cache/",
-            "src/Resources/contao/config/",
-            "src/Resources/contao/dca/",
-            "src/Resources/contao/languages/",
-            "src/Resources/contao/templates/"
+            "contao/config/",
+            "contao/dca/",
+            "contao/languages/",
+            "contao/templates/"
         ]
     },
     "extra": {
-		"contao-manager-plugin": "Softleister\\LinksplitterBundle\\ContaoManager\\Plugin"
+        "contao-manager-plugin": "Softleister\\LinksplitterBundle\\ContaoManager\\Plugin"
     }
 }

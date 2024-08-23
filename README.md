@@ -10,6 +10,7 @@ Anwendungsbeispiele sind:
 
 
 **Version:**<br>
+* 2.0.0 stable - 2024-08-23<br>Bundle für Contao ab 5.3
 * 1.2.1 stable - 2022-05-31<br>PHP 8-Kompatibilität
 * 1.2.0 stable - 2021-01-23<br>Variable für Abhängigkeit erweitert: REQUEST (GET und POST) und COOKIE<br>Danke an wuapaadev
 * 1.1.0 stable - 2020-03-23<br>Version für Contao ab Version 4.6<br>veränderter Wizardaufruf, multicolumnwizard-bundle
@@ -34,4 +35,4 @@ https://github.com/do-while/contao-linksplitter/issues
 
 
 ___
-Softleister - 2022-05-31
+Softleister - 2024-08-23
